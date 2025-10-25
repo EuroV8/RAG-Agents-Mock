@@ -1,0 +1,22 @@
+Runtime Error Playbook
+
+Symptoms to monitor:
+- API requests begin returning HTTP 500 immediately after deployment.
+- Workspace analytics dashboards render empty charts.
+- Agent responses exceed fifteen seconds.
+
+Likely root causes and fixes:
+1. Out of date schema migrations. Triggered when a release goes out without running ./gradlew flywayMigrate. Fix by running the migration and restarting the app-core service.
+2. Invalid OpenSearch credentials. Triggered when a rotated API key is not propagated to OPENSEARCH_API_KEY. Fix by updating the secret and restarting the DocHelper agent.
+3. Misconfigured webhook retries. Triggered when WEBHOOK_RETRY_LIMIT is higher than ten, creating a queue backlog. Fix by resetting the limit to five and purging stuck jobs.
+
+Resolution checklist:
+- Confirm the application version using GET /internal/health.
+- Validate OpenSearch cluster health with curl -u $USER:$PASS $HOST/_cluster/health.
+- Tail logs/app-core.log and look for TransportException entries.
+- Clear the analytics cache with POST /internal/cache/purge?type=analytics.
+
+Preventive actions:
+- Automate the release checklist in continuous integration.
+- Monitor the OpenSearch error budget through slack://#oncall-ink.
+- Send a daily report covering the webhook DLQ size.

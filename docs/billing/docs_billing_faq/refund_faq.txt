@@ -1,0 +1,17 @@
+Billing Refund FAQ
+
+Submitting a refund request:
+- Direct customers to the self-service form at https://inksupport.example.com/refunds.
+- Remind them to include their workspace ID, invoice number, and a short issue summary.
+
+Initial response time:
+- Billing acknowledges submissions within one business day.
+- Cases escalate to the Billing Agent whenever automated checks detect missing information.
+
+Approval guidelines:
+- Starter and Growth plans require proof that adoption blockers were reported within thirty days of billing.
+- Scale plan refunds follow the master services agreement and need executive approval.
+
+Payout process:
+- Approved refunds are processed in the nightly batch and typically arrive within five business days.
+- Customers receive an email confirmation that includes a tracking ID and expected payout timeline.

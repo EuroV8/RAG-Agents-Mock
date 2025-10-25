@@ -1,0 +1,27 @@
+Integration Guidance
+
+OAuth application setup steps:
+- Register the integration in the Inksoftware console.
+- Configure the callback URL as https://{tenant}.inksoftware.app/oauth/callback.
+- Store the client_id and client_secret in the secrets manager.
+
+Webhook delivery expectations:
+- Events originate from 54.185.112.45/32.
+- Retries follow exponential backoff at 1, 5, 15, 30, and 60 minutes.
+- Each payload includes the X-Ink-Signature header signed with HMAC SHA256.
+
+Debug checklist:
+- Validate the signature with openssl sha256 -hmac $SIGNING_SECRET.
+- Inspect recent deliveries via GET /integrations/{id}/webhooks.
+- Trigger a manual replay with POST /integrations/{id}/webhooks/{event}/replay.
+
+Sample Java client initialization:
+InkClient client = InkClient.builder()
+    .withApiKey(System.getenv("INK_API_KEY"))
+    .withBaseUrl("https://api.inksoftware.com")
+    .build();
+
+Rate limits:
+- Default tenants receive 600 requests per minute per API key.
+- Burst capacity allows 120 requests in any ten second window.
+- Exceeding limits returns HTTP 429 with a Retry-After header.

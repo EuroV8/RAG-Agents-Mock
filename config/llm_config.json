@@ -1,0 +1,9 @@
+{
+    "aiEndpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "aiApiKey": "<YOUR_API_KEY>",
+    "aiModel": "openai/gpt-oss-20b:free",
+    "embeddingEndpoint": "http://127.0.0.1:11435/v1/embeddings",
+    "embeddingApiKey": "",
+    "embeddingModel": "sentence-transformers/all-MiniLM-L6-v2",
+    "embeddingDimensions": 384
+}

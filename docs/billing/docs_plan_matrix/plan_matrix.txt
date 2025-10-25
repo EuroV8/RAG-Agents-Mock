@@ -1,0 +1,24 @@
+Plan Comparison Matrix
+
+Starter plan:
+- Monthly price 19 USD and annual price 199 USD.
+- Best-effort service level with email support.
+- Intended for small teams that need basic collaboration.
+
+Growth plan:
+- Monthly price 49 USD and annual price 499 USD.
+- Ninety-nine percent uptime with priority email support.
+- Includes integrations API and advanced analytics pack.
+
+Scale plan:
+- Monthly price 129 USD and annual price 1290 USD.
+- Ninety-nine point nine percent uptime with a dedicated customer success manager.
+- Contract based and requires sixty days notice for cancellation.
+
+Upgrade guidance:
+- Move from Starter to Growth when integrations or analytics become necessary.
+- Move from Growth to Scale when audit logs, dedicated SLAs, or compliance exports are required.
+
+Downgrade guidance:
+- Review annual commitments before approving a downgrade to avoid penalties.
+- Offer courtesy credits when downgrading from Scale to Growth following SLA misses.

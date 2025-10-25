@@ -1,0 +1,19 @@
+API Authentication Reference
+
+Base URL: https://api.inksoftware.com/v1
+
+API Key Authentication:
+- Send header Authorization: Bearer <api-key>.
+- Rotate keys every 90 days via the console.
+
+OAuth 2.0 Client Credentials:
+- Token endpoint: https://auth.inksoftware.com/oauth/token.
+- Required scopes include workspace:read, workspace:write, and billing:read.
+
+Common Error Codes:
+- 401 auth.invalid_token indicates the token is missing, expired, or revoked.
+- 403 auth.forbidden indicates the token lacks the required scope.
+- 429 rate.limit indicates the request exceeded the allowed rate.
+
+Curl Example:
+curl --request GET --url https://api.inksoftware.com/v1/workspaces --header "Authorization: Bearer $INK_API_KEY"

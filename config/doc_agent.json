@@ -1,0 +1,37 @@
+{
+  "name": "Technical Agent",
+  "keywords": [
+    "documentation",
+    "api",
+    "code",
+    "error",
+    "bug",
+    "debug",
+    "function",
+    "class",
+    "method"
+  ],
+  "responseTemplate": "I can help with technical questions. You asked: %QUESTION%",
+  "config": {
+    "openSearchEndpoint": "http://localhost:9200",
+    "indexNames": [
+      "docs_troubleshooting",
+      "docs_integrations",
+      "docs_api_reference",
+      "docs_release_notes"
+    ],
+    "openSearchApiKey": "",
+    "openSearchUsername": "",
+    "openSearchPassword": "",
+    "maxSectionsPerIndex": 3,
+    "maxCombinedSectionCharacters": 4000,
+    "aiEndpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "aiApiKey": "<YOUR_API_KEY>",
+    "aiModel": "openai/gpt-oss-20b:free",
+    "vectorField": "embedding",
+    "embeddingEndpoint": "http://127.0.0.1:11435/v1/embeddings",
+    "embeddingApiKey": "",
+    "embeddingModel": "sentence-transformers/all-MiniLM-L6-v2",
+    "embeddingDimensions": 384
+  }
+}

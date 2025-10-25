@@ -1,0 +1,19 @@
+Release Notes — Q4 2024
+
+Highlights:
+- Collaborative agent routing now supports billing escalation shortcuts.
+- DocHelper agent uses OpenSearch vector search for retrieval.
+- Billing APIs include refund timeline metadata.
+
+Breaking changes:
+- GET /audit/logs is deprecated in favour of GET /events/audit.
+- Webhook payloads now include the x-request-region field.
+
+Upgrade notes:
+- Run database migration V202410101200__add_refund_timeline.sql.
+- Update the SDK to inksoftware-java version 2.8.0.
+- Reindex documentation with OpenSearchIndexer after upgrading.
+
+Known issues:
+- Dashboard CSV exports truncate at ten thousand rows; fix planned for Q1 2025.
+- Legacy plans continue to display old prices in sandbox environments.

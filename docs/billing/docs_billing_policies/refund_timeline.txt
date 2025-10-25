@@ -1,0 +1,18 @@
+Refund Policy Breakdown
+
+Starter plan policy:
+- Refunds are eligible during the first thirty days of the billing cycle.
+- After thirty days, offer prorated credit if uptime drops below ninety-nine percent.
+
+Growth plan policy:
+- Provide a full refund within thirty days when onboarding blockers are documented.
+- After thirty days, handle each request case by case and resolve within thirty days of submission.
+
+Scale plan policy:
+- Terms follow the master services agreement.
+- Issue credits when service-level agreements are missed for two consecutive weeks.
+- Early termination requires sixty days written notice.
+
+Supporting artifacts:
+- Maintain audit logs of customer communication in the CRM.
+- Attach incident identifiers whenever SLA violations are involved.
