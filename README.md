@@ -45,6 +45,9 @@ In that case, it is reccomended to deploy the individual parts by yourself.
 - By default, debugging output is disabled, if you wish to enable it, set the "DEBUG" macro in `src/main/java/com/inksoftware/Main.java` to `true`.
 - If you wish to do each step individually, refer to said script.
 
+## Run
+- Shaded JAR, run in the project's root : `java -jar target/ai-support-client-1.0.jar`
+
 ## Shutdown
 A small shell script is provided for the shutdown of the docker instance and python embedding server in `scripts/shutdown.sh`
 
